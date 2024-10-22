@@ -12,6 +12,7 @@ jest.mock('../../lib/main/server/controllers/appController');
 jest.mock('../../lib/main/server/middleware/auth');
 
 const app = express();
+app.disable('x-powered-by');
 app.use(express.json());
 app.use('/', router);
 
