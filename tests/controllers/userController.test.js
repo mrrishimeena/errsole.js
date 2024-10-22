@@ -3,7 +3,9 @@ const helpers = require('../../lib/main/server/utils/helpers');
 const { getStorageConnection } = require('../../lib/main/server/storageConnection');
 const Jsonapi = require('../../lib/main/server/utils/jsonapiUtil');
 const jwt = require('jsonwebtoken');
-const fakePassword = ''
+const fakePassword = 'password123';
+const incorrectPassword = 'incorrectpassword';
+const testPassword = 'testPassword';
 
 /* globals expect, jest,  it, beforeAll, afterAll, beforeEach, describe */
 
@@ -270,7 +272,7 @@ describe('userController', () => {
           data: {
             attributes: {
               email: 'test@example.com',
-              password: 'incorrectpassword'
+              password: incorrectPassword
             }
           }
         }
@@ -284,12 +286,12 @@ describe('userController', () => {
       };
       getStorageConnection.mockReturnValue(mockStorageConnection);
 
-      helpers.extractAttributes.mockReturnValue({ email: 'test@example.com', password: 'incorrectpassword' });
+      helpers.extractAttributes.mockReturnValue({ email: 'test@example.com', password: incorrectPassword });
       helpers.getJWTSecret.mockReturnValue('secret');
 
       await loginUser(req, res);
 
-      expect(mockStorageConnection.verifyUser).toHaveBeenCalledWith('test@example.com', 'incorrectpassword');
+      expect(mockStorageConnection.verifyUser).toHaveBeenCalledWith('test@example.com', incorrectPassword);
       expect(res.status).toHaveBeenCalledWith(401);
       expect(res.send).toHaveBeenCalledWith({
         errors: [{ error: 'Unauthorized', message: 'Login failed, please check your credentials' }]
@@ -302,7 +304,7 @@ describe('userController', () => {
           data: {
             attributes: {
               email: 'test@example.com',
-              password: 'testpassword'
+              password: testPassword
             }
           }
         }
