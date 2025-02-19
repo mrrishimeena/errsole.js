@@ -3,17 +3,23 @@
 
   <h3 align="center">Collect, Store, and Visualize Logs with a Single Module</h3>
 
-  <div align="center">
-  <img src="https://img.shields.io/github/v/release/errsole/errsole.js" alt="Release Version" />
-  <img src="https://img.shields.io/github/last-commit/errsole/errsole.js" alt="Last Commit" />
-  <img src="https://img.shields.io/github/license/errsole/errsole.js" alt="License" />
-  <a href="https://coveralls.io/github/errsole/errsole.js">
-    <img src="https://coveralls.io/repos/github/errsole/errsole.js/badge.svg" alt="Coverage Status" />
-  </a>
-  </div>
+  <p align="center">
+    <a href="#setup">Setup</a> |
+    <a href="https://github.com/errsole/errsole.js/blob/master/docs/advanced-configuration.md">Advanced Configuration</a> |
+    <a href="https://github.com/errsole/errsole.js/blob/master/docs/advanced-logging-functions.md">Advanced Logging Functions</a>
+  </p>
+
+  <p align="center">
+    <img src="https://img.shields.io/github/v/release/errsole/errsole.js" alt="Release Version" />
+    <img src="https://img.shields.io/github/last-commit/errsole/errsole.js" alt="Last Commit" />
+    <img src="https://img.shields.io/github/license/errsole/errsole.js" alt="License" />
+    <a href="https://coveralls.io/github/errsole/errsole.js">
+      <img src="https://coveralls.io/repos/github/errsole/errsole.js/badge.svg" alt="Coverage Status" />
+    </a>
+  </p>
 </p>
 
-Errsole is an open-source logger for Node.js. It has a built-in web dashboard to view, filter, and search your app logs.
+Errsole is an open-source logger for Node.js apps. It comes with a built-in log viewer to view, filter, and search your app logs.
 
 https://github.com/errsole/errsole.js/assets/3775513/b59424fa-c3b3-4a65-b603-e35499fe4263
 
@@ -25,13 +31,13 @@ Just include the Errsole package in your code—no need for dedicated servers, s
 
 ### Logger++
 
-Errsole automatically collects all logs from the Node.js console. Additionally, it provides a custom logger with multiple log levels and allows you to include metadata with your logs for better context. [Read More](https://github.com/errsole/errsole.js/blob/master/docs/custom-logging-functions.md)
+Errsole automatically collects all logs from the Node.js console. Additionally, it provides advanced logging functions that support multiple log levels and the ability to attach metadata to logs. [Read More](https://github.com/errsole/errsole.js/blob/master/docs/advanced-logging-functions.md)
 
 ### Store Anywhere
 
 Store your logs wherever you want—whether in a file or any database of your choice. You can also configure log rotation to specify how long logs should be retained.
 
-### Web Dashboard
+### Log Viewer
 
 View, filter, and search through your logs using the built-in Web Dashboard. Secure authentication and team management features ensure that only you and your team can access the logs.
 
@@ -56,22 +62,18 @@ For local development or scenarios where you prefer storing logs directly on the
 
 In production environments, where centralized log storage is critical, Errsole offers multiple storage options to fit your needs:
 
-* [Errsole with MongoDB](https://github.com/errsole/errsole.js/blob/master/docs/mongodb-storage.md)
 * [Errsole with MySQL](https://github.com/errsole/errsole.js/blob/master/docs/mysql-storage.md)
 * [Errsole with PostgreSQL](https://github.com/errsole/errsole.js/blob/master/docs/postgresql-storage.md)
-* Errsole with AWS CloudWatch (Upcoming)
+* [Errsole with MongoDB](https://github.com/errsole/errsole.js/blob/master/docs/mongodb-storage.md)
+* Errsole with AWS DynamoDB (Upcoming)
 
 #### Advanced Configuration
 
 * [Advanced Configuration](https://github.com/errsole/errsole.js/blob/master/docs/advanced-configuration.md)
 
-#### Custom Logging Functions
+#### Advanced Logging
 
-* [Custom Logging Functions](https://github.com/errsole/errsole.js/blob/master/docs/custom-logging-functions.md)
-
-#### Web Dashboard Access
-
-* [Web Dashboard Access](https://github.com/errsole/errsole.js/blob/master/docs/web-dashboard-access.md)
+* [Advanced Logging Functions](https://github.com/errsole/errsole.js/blob/master/docs/advanced-logging-functions.md)
 
 #### Integrations
 
